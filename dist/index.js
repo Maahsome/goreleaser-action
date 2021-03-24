@@ -192,7 +192,7 @@ const core = __importStar(__webpack_require__(186));
 const semver = __importStar(__webpack_require__(911));
 exports.getRelease = (version) => __awaiter(void 0, void 0, void 0, function* () {
     const resolvedVersion = (yield resolveVersion(version)) || version;
-    const url = `https://github.com/goreleaser/goreleaser/releases/${resolvedVersion}`;
+    const url = `https://github.com/maahsome/goreleaser/releases/${resolvedVersion}`;
     const http = new httpm.HttpClient('goreleaser-action');
     return (yield http.getJson(url)).result;
 });
@@ -270,7 +270,7 @@ function getGoReleaser(version) {
         }
         core.info(`✅ GoReleaser version found: ${release.tag_name}`);
         const filename = getFilename();
-        const downloadUrl = util.format('https://github.com/goreleaser/goreleaser/releases/download/%s/%s', release.tag_name, filename);
+        const downloadUrl = util.format('https://github.com/maahsome/goreleaser/releases/download/%s/%s', release.tag_name, filename);
         core.info(`⬇️ Downloading ${downloadUrl}...`);
         const downloadPath = yield tc.downloadTool(downloadUrl);
         core.debug(`Downloaded to ${downloadPath}`);
@@ -6919,7 +6919,7 @@ module.exports = require("util");
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -6932,7 +6932,7 @@ module.exports = require("util");
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		var threw = true;
 /******/ 		try {
@@ -6941,14 +6941,14 @@ module.exports = require("util");
 /******/ 		} finally {
 /******/ 			if(threw) delete __webpack_module_cache__[moduleId];
 /******/ 		}
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat */
-/******/ 	
+/******/
 /******/ 	__webpack_require__.ab = __dirname + "/";/************************************************************************/
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
